@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
 }
 
 :root {
@@ -23,6 +24,7 @@ body {
     box-sizing: border-box;
     color: var(--ps-white);
     background-color: var(--ps-body);
+    overflow-x: hidden;
 }
 
 .font-title {
@@ -59,6 +61,10 @@ p {
 
 .text-primary {
     color: var(--ps-primary) !important;
+}
+
+.bg-dark {
+    background: var( --ps-dark) !important;
 }
 
 .btn {
@@ -113,6 +119,12 @@ p {
 section {
     position: relative;
 }
+.section-inner {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto 3rem;
+}
+
 .bg-pattern {
     position: absolute;
     bottom: 0;
@@ -125,7 +137,7 @@ section {
 
 .section-title {
     position: relative;
-    background: url(https://portfar-react.themepresss.com/static/media/title.63d619df.jpg) no-repeat;
+    background: url(../img/bg-heading.jpg) no-repeat;
     background-size: cover;
     text-transform: capitalize;
     -webkit-background-clip: text;
@@ -311,4 +323,27 @@ section {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+}
+
+.skill-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--ps-body);
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 14px;
+    padding: 28px;
+    transition: all 0.5s ease-in-out;
+}
+.skill-col:hover {
+    /* transform: translateY(-4px); */
+    border-color: var(--ps-primary);
+}
+.skill-col h3 {
+    margin-bottom: 0px;
+}
+.skill-col:hover img {
+    transform: scale(1.1);
 }
